@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="login.css" />
+</head>
+
+<body>
+    <header>
+        <img src="icons/logo-used-header.svg" />
+    </header>
+
+    <main>
+        <div class="login-card">
+            <div class="title">
+                <span style="margin-right: auto;"><img src="./icons/back.svg" /></span>
+                <h2 style="margin-right: auto;">Login with Quantum</h2>
+            </div>
+
+            <div class="radio-checkbox">
+                <label>
+
+                    <img src="icons/radio-button-on.svg" />
+                    &nbsp; District</span>
+                </label>
+                <label>
+                    <img src="icons/radio-button-off.svg" />
+                    &nbsp;Independent School
+                </label>
+            </div>
+
+
+            <div class="dropdowns">
+                <div style="margin-bottom: 20px;">
+                    <label for="state" style="color:rgb(119, 119, 119);;">State*</label>
+                    <div class="custom-select">
+                        <select name="state" id="state">
+                            <option value="" disabled selected>Alabama</option>
+                            <!-- Add state options here -->
+                        </select>
+                        <span> <img src="./icons/arrow-down.svg" /></span>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="state" style="color:rgb(119, 119, 119);;">District*</label>
+                    <div class="custom-select">
+                        <select name="district" id="district">
+                            <option value="" disabled selected>Alabama School District</option>
+                            <!-- Add district options here -->
+
+                        </select>
+                        <span> <img src="./icons/arrow-down.svg" /></span>
+                    </div>
+                </div>
+            </div>
+<br>
+
+            <div class="input-fields">
+                <div class="username">
+                 
+                    <input  type="text" id="username" name="Username/Email"  placeholder="Username/Email ID*"/>
+                </div>
+                <span class="forget">FORGOT USERNAME</span>
+                <br><br><br>
+                <div class="pre">
+                  
+                        <input type="password" id="password" name="password" placeholder="Password*" />
+                    <img src="./icons/preview.svg" alt="Preview Password" />
+                </div>
+              <span class="forget">FORGOT PASSWORD</span>
+
+
+            </div>
+
+
+            <label class="remember-me">
+                <img src="./icons/checkbox-checked.svg" />
+                Remember Me
+            </label>
+            <center> <button type="submit">LOG IN</button></center>
+        </div>
+    </main>
+<nav class="nav">
+    <p>About</p>  <div class="footer-divider"></div>
+    <p>Contact us</p>
+</nav>
+    <footer class="footer-content">
+        <img src="icons/logo-footer.svg" />
+        <div>
+            <div class="footer-divider"></div>
+            <p>Copyright &copy; 2020-2021</p>
+            &nbsp;
+            <p style="font-weight: 600;">Zeus Systems Pvt.Ltd.</p>
+            &nbsp; &nbsp;
+            <p>All right reserved</p>
+            &nbsp;
+        </div>
+    </footer>
+</body>
+
+</html>

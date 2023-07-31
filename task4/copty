@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash</title>
+
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <img class="logo" src="icons/logo-used-header.svg" alt="Logo" />
+        <ul>
+          <div class="menu-items">
+            <li><a href="#">DASHBOARD</a></li>
+            <li><a href="#">CONTENT</a></li>
+            <li><a href="#">USERS</a></li>
+            <li><a href="#">REPORTS</a></li>
+            <li><a href="#">ADMIN</a></li>
+          </div>
+          <div class="no">
+            <p class="noti">2</p>
+            <li><img src="icons/alerts.svg" alt="Alerts" /></li>
+          </div>
+          <div class="no3">
+            <p class="noti3">1</p>
+            <li><img src="icons/announcements.svg" alt="Announcements" /></li>
+          </div>
+
+          <div class="no1">
+            <p class="noti1">T</p>
+            <li><img " src="icons/account_circle.svg" alt="User Account" /></li>
+          </div>
+          <img
+            style="padding-bottom: 5px; padding-left: 10px"
+            id="menu-button"
+            src="icons/hamburger-menu.svg"
+          />
+        </ul>
+      </nav>
+    </header>
+
+    <div>
+      <div class="sidebar">
+        <a class="a">
+          <img src="./icons/courses.svg" />
+          <span>
+            <strong style="font-size: 25px">4</strong>
+            <span style="font-weight: 500">Courses</span>
+          </span>
+        </a>
+        <a>
+          <i>
+            <img src="./icons/classes.svg" alt />
+          </i>
+          <span>
+            <strong style="font-size: 25px">4</strong>
+            <span style="font-weight: 500">Classes</span>
+          </span>
+        </a>
+      </div>
+
+      <div class="sort">
+        <span
+          style="margin-bottom: 10px; color: rgb(66, 66, 66); font-weight: 500"
+        >
+          Showing 4 of 4 courses
+        </span>
+
+        <span class="dropdowns0">
+          <div>
+            <div class="custom-select0">
+              <select name="state" id="state">
+                <option value disabled selected>Course Name</option>
+              </select>
+              <span> <img src="./icons/arrow-down.svg" /></span>
+            </div>
+          </div>
+        </span>
+        <img style="margin-bottom: 20px" src="./icons/sort.svg" />
+      </div>
+
+      <div class="Courses">
+        <div class="box">
+          <div class="course">
+            <img src="images/imageMask-1.svg" />
+            <div class="content">
+              <div class="flex-fvt">
+                <h3>Acceleration</h3>
+                <img class="fvt" src="icons/favourite.svg" />
+              </div>
+              <div class="grade">
+                <p>Physics</p>
+                <p>|</p>
+                <p>Grade 7 <span class="two">+2</span></p>
+              </div>
+              <div class="syllabus">
+                <p class="p"><strong>4</strong> Units</p>
+                <p class="p"><strong>18</strong> Lessons</p>
+                <p class="p"><strong>24</strong> Topics</p>
+              </div>
+
+              <div class="dropdowns">
+                <div>
+                  <div class="custom-select">
+                    <select name="state" id="state">
+                      <option value disabled selected>
+                        Mr. Frank's Class B
+                      </option>
+                    </select>
+                    <span> <img src="./icons/arrow-down.svg" /></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="date">
+                <p>50 students</p>
+                <div class="footer-divider"></div>
+                <p style="padding-left: 10px">21-Jan-2020 - 21-Aug-2020</p>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+          <div class="icon">
+            <img src="icons/preview.svg" />
+            <img src="icons/manage course.svg" />
+            <img src="icons/grade submissions.svg" />
+            <img src="icons/reports.svg" />
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="course">
+            <img src="images/imageMask-2.svg" />
+            <div class="content">
+              <div class="flex-fvt">
+                <h3 class="text1">Displacement,Velocity and Speed</h3>
+                <img class="fvt" src="icons/favourite.svg" />
+              </div>
+              <div class="grade">
+                <p>Physics 2</p>
+                <p>|</p>
+                <p>Grade 6 <span class="two">+3</span></p>
+              </div>
+              <div class="syllabus">
+                <p class="p"><strong>2</strong> Units</p>
+                <p class="p"><strong>15</strong> Lessons</p>
+                <p class="p"><strong>20</strong> Topics</p>
+              </div>
+
+              <div class="dropdowns">
+                <div>
+                  <div class="custom-select1">
+                    <select name="state" id="state1">
+                      <option value selected>No Classes</option>
+                    </select>
+                    <span> <img src="./icons/arrow-down.svg" /></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+          <div class="icon">
+            <img src="icons/preview.svg" />
+            <img class="obesity" src="icons/manage course.svg" />
+            <img class="obesity" src="icons/grade submissions.svg" />
+            <img src="icons/reports.svg" />
+          </div>
+        </div>
+        <div class="box">
+          <div class="course">
+            <img src="images/imageMask-3.png" />
+            <div class="content">
+              <div class="flex-fvt">
+                <h3 class="text">
+                  Introduction to Biology:Micro ogranisms and how they affec...
+                </h3>
+                <img class="fvt" src="icons/favourite.svg" />
+              </div>
+              <div class="grade">
+                <p>Biology</p>
+                <p>|</p>
+                <p>Grade 4 <span class="two">+1</span></p>
+              </div>
+              <div class="syllabus">
+                <p class="p"><strong>5</strong> Units</p>
+                <p class="p"><strong>16</strong> Lessons</p>
+                <p class="p"><strong>22</strong> Topics</p>
+              </div>
+
+              <div class="dropdowns">
+                <div>
+                  <div class="custom-select">
+                    <select name="state" id="state">
+                      <option value disabled selected>All Classes</option>
+                    </select>
+                    <span> <img src="./icons/arrow-down.svg" /></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="date">
+                <p>300 students</p>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+          <div class="icon">
+            <img src="icons/preview.svg" />
+            <img class="obesity" src="icons/manage course.svg" />
+            <img class="obesity" src="icons/grade submissions.svg" />
+            <img src="icons/reports.svg" />
+          </div>
+        </div>
+        <div class="box">
+          <p class="expired"><span>EXPIRED</span></p>
+          <div class="course" style="margin-top: -10px">
+            <img src="images/imageMask-3.svg" />
+            <div class="content">
+              <div class="flex-fvt">
+                <h3 class="text">Introduction to High School Mathematics</h3>
+                <img class="fvt" src="icons/unfavourite.svg" />
+              </div>
+              <div class="grade">
+                <p>Mathematics</p>
+                <p>|</p>
+                <p>Grade 8<span class="two">+3</span></p>
+              </div>
+
+              <div class="dropdowns">
+                <div>
+                  <div class="custom-select">
+                    <select name="state" id="state">
+                      <option value disabled selected>
+                        Mr. Frank's Class A
+                      </option>
+                    </select>
+                    <span> <img src="./icons/arrow-down.svg" /></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="date">
+                <p>44 students</p>
+                <div class="footer-divider"></div>
+                <p style="padding-left: 10px">14-Oct-2019 - 20-Oct-2020</p>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+          <div class="icon">
+            <img src="icons/preview.svg" />
+            <img src="icons/manage course.svg" />
+            <img src="icons/grade submissions.svg" />
+            <img src="icons/reports.svg" />
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <p>About</p>
+        <div class="footer-divider"></div>
+        <p>Contact us</p>
+      </nav>
+      <footer class="footer-content">
+        <img src="icons/logo-footer.svg" />
+        <div>
+          <div class="footer-divider"></div>
+          <p>Copyright &copy; 2020-2021</p>
+          &nbsp;
+          <p style="font-weight: 600">Zeus Systems Pvt.Ltd.</p>
+          &nbsp; &nbsp;
+          <p>All right reserved</p>
+          &nbsp;
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const Courses = {
+        courses: {
+          1: {
+            name: "Acceleration",
+            subject: "Physics",
+            grade: "Grade 7",
+            units: 4,
+            lessons: 18,
+          },
+          2: {
+            name: "Displacement, Velocity and Speed",
+            subject: "Physics 2",
+            grade: "Grade 6",
+            units: 2,
+            lessons: 15,
+          },
+          3: {
+            name: "Introduction to Biology: Microorganisms and how they affect...",
+            subject: "Biology",
+            grade: "Grade 4",
+            units: 5,
+            lessons: 16,
+          },
+          4: {
+            name: "Introduction to High School Mathematics",
+            subject: "Mathematics",
+            grade: "Grade 8",
+            units: 6,
+            lessons: 22,
+          },
+        },
+      };
+
+      // JavaScript to toggle the mobile menu on button press
+      // Add an event listener to the menu button to toggle the menu on click
+      document
+        .getElementById("menu-button")
+        .addEventListener("click", function () {
+          var navItems = document.querySelector(".menu-items");
+          if (navItems.style.display === "flex") {
+            navItems.style.display = "none";
+          } else {
+            navItems.style.display = "flex";
+          }
+        });
+    </script>
+  </body>
+</html>

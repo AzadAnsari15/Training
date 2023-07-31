@@ -1,0 +1,123 @@
+body {
+  background-color: rgb(221, 217, 217);
+  font-family: quicksand;
+}
+main {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 300px;
+}
+.title {
+  display: flex;
+  padding-left: 12px;
+}
+.login-card {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  width: 70%;
+  border-top: 5px solid rgb(100, 197, 235);
+}
+
+.title h2 {
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.radio-checkbox label {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.radio-checkbox {
+  display: flex;
+}
+
+.dropdowns {
+  margin-bottom: 15px;
+  padding: 20px;
+}
+.custom-select {
+  display: flex;
+  border-bottom: 1px solid #ccc; /* Bottom border */
+}
+
+.dropdowns label {
+  padding-left: 0px;
+  padding-bottom: 20px;
+}
+.custom-select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 10px 25px 5px 0px;
+  font-size: 16px;
+  width: 100%;
+  color: #333;
+}
+
+.input-fields {
+  padding: 0 20px 20px 20px;
+}
+.username {
+  border-bottom: 1px solid #ccc; /* Bottom border */
+}
+.input-fields input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  background-color: #fff;
+}
+
+.pre {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc; /* Bottom border */
+}
+
+.forget {
+  float: right;
+  color: #287742;
+  font-weight: 550;
+}
+input::placeholder {
+  padding-left: -1px;
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 20px;
+  font-weight: 500;
+}
+
+.remember-me input {
+  margin-right: 8px;
+}
+
+button {
+  text-align: center;
+  font-weight: 500;
+  width: 30%;
+  padding: 10px;
+  background-color: #68db8e;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.nav {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  color: #1f6637;
+  font-weight: 500;
+}
