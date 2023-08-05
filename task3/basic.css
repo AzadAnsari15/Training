@@ -1,0 +1,41 @@
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: #ffff;
+}
+
+html,
+body {
+  margin: 10px;
+}
+
+.container > div:first-child {
+  background-color: #8e67e9;
+}
+.container > div:last-child {
+  background-color: #9a65d6;
+}
+.container > div:nth-child(2) {
+  background-color: #65d6b4;
+}
+.container > div:nth-child(4) {
+  background-color: #8e67e9;
+}
+.container > div:nth-child(3) {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(124, 52, 218),
+    rgb(34, 118, 197),
+    #27e2c9
+  );
+}
+.container > div:nth-child(5) {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(124, 52, 218),
+    rgb(34, 118, 197),
+    #27e2c9
+  );
+}

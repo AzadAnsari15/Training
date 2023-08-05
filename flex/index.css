@@ -1,0 +1,38 @@
+.container{
+    border: 5px solid black;
+    /* height: 100%; */
+    display: flex;
+
+    align-items: center
+    ;
+
+    /* justify-content: end; */
+    
+    /* flex-start flex-end center space-around
+    space-between space-evenly */
+}
+/* 
+.home{
+    margin-right: auto;
+} */
+
+.container>div{
+    /* flex: 1; */
+    /* flex-grow,flex-shrink,flex-basis*/
+    
+}
+/* 
+.home{
+    flex: 1;
+} */
+/* 
+.home{
+    align-self: flex-start;
+} */
+.home {
+    flex: 1 1 200px;
+} 
+
+.logout {
+    flex:1 1 200px;
+}
