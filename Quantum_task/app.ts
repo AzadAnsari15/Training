@@ -396,3 +396,5 @@ document.addEventListener("DOMContentLoaded", function () {
   // Show the alarm notifications on initial load
   toggleAlarmNotifications();
 });
+
+

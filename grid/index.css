@@ -4,18 +4,17 @@ grid-template-columns: 100px auto;
 grid-template-rows:50px 50px 200px ;
 } */
 
-
-.container{
-    display: grid;
-    /* grid-template-columns: repeat(3,1fr);
+.container {
+  display: grid;
+  /* grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2,50px); */
-    grid-template: repeat(2, 50px)/repeat(3, 1fr);
+  grid-template: repeat(2, 50px) / repeat(3, 1fr);
 }
-.structure{
- margin: 50px;
- display: grid;  
- grid-template-columns: repeat(12,1fr);
-grid-template-rows: 40px 200px 40px;
+.structure {
+  margin: 50px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px 200px 40px;
 }
 
 .header {
@@ -23,7 +22,7 @@ grid-template-rows: 40px 200px 40px;
 }
 
 .menu {
-grid-row:1/3;
+  grid-row: 1/3;
 }
 
 .content {
@@ -31,25 +30,24 @@ grid-row:1/3;
 }
 
 .footer {
-grid-column: 1/-1;
+  grid-column: 1/-1;
 }
 
-.auto-fit >div{
-    background-color: brown;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.auto-fit > div {
+  background-color: brown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.auto-fit>div:nth-child(3n) {
-    background-color: #88d8b0;
+.auto-fit > div:nth-child(3n) {
+  background-color: #88d8b0;
 }
 .auto-fit {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    /* grid-template-rows: repeat(2, 100px); */
-    grid-auto-rows: 100px;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  /* grid-template-rows: repeat(2, 100px); */
+  grid-auto-rows: 100px;
 }
 /* template-area */
 /* .container {
