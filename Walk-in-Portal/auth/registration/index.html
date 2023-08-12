@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navBar">
+      <img class="logo" src="spec/Zeus-LMS-logo.svg" alt="Logo" />
+    </nav>
+    <header>
+      <div>
+        <img class="arrow" src="spec/arrow_upward_black_24dp.svg" />
+        <p>Create An Account</p>
+        <div>
+          <button class="cancel">CANCEL</button>
+          <button class="create disabled">CREATE</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="row bg-white">
+        <div class="col-6">
+          <form>
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                value="John"
+              />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                value="Watson"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                value="johnawatson@example.com"
+              />
+            </div>
+            <div class="form-group">
+              <label for="phoneNumber">Phone Number</label>
+              <div style="display: flex; align-items: center">
+                <span style="margin-right: 5px">+</span>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phoneNumber"
+                  value="91"
+                  style="width: 25px; margin-right: 20px"
+                />
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phoneNumber"
+                  value="9876543210"
+                />
+              </div>
+            </div>
+            <label class="file-upload">
+              <span class="upload-icon"
+                ><img src="spec/Upload_black_24dp.svg" alt=""
+              /></span>
+
+              <span class="upload-text">Upload Resume</span>
+
+              <input type="file" />
+            </label>
+            <div class="form-group">
+              <label for="url">Enter Portfolio URL (if any)</label>
+              <input
+                type="url"
+                class="form-control"
+                id="email"
+                value="www.myportfolio.in"
+              />
+            </div>
+            <div class="check">
+              <p style="color: #7a7c7e; font-size: small">
+                Preferred Job Roles*
+              </p>
+              <label class="checkbox-container">
+                &nbsp; &nbsp;<span style="font-weight: bold"
+                  >Instructional Designer</span
+                >
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="checkbox-container">
+                &nbsp; &nbsp;<span style="font-weight: bold"
+                  >Software Engineer</span
+                >
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="checkbox-container">
+                &nbsp; &nbsp;<span style="font-weight: bold"
+                  >Software Quality Engineer</span
+                >
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <p
+                style="
+                  font-size: 12px;
+                  margin: 30px 0;
+                  font-weight: 600;
+                  color: #7a7c7e;
+                "
+              >
+                If You Are Registering Via A Referral, Please Mention Full Name
+                Of The Employee Who Referred You
+              </p>
+              <p class="border-bottom"></p>
+              <label class="checkbox-container">
+                &nbsp; &nbsp;<span style="font-weight: bold"
+                  >Send me job related updates via mail</span
+                >
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="col-6" style="position: relative">
+          <div class="right-section">
+            <img src="avatar.png" />
+            <label class="file-upload">
+              <span class="upload-text">UPLOAD DISPLAY PICTURE</span>
+
+              <input type="file" />
+            </label>
+            <p>Max. image size: 5 MB</p>
+          </div>
+        </div>
+      </div>
+      <center><button class="next">Next</button></center>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
