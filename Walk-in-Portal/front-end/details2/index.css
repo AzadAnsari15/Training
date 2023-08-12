@@ -1,0 +1,277 @@
+@font-face {
+  font-family: quicksand;
+  src: url(Quicksand-VariableFont_wght.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: quicksand;
+}
+
+body {
+  background: #eeeeee;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  height: 57px;
+  background: #1f2834;
+  opacity: 1;
+}
+
+.user {
+  width: 40px;
+  height: 40px;
+  background: #3c4e62;
+  border: 2px solid var(--primary-button-color, #3fd28b);
+  opacity: 1;
+  border-radius: 50%;
+}
+.box {
+  padding: 0 50px;
+}
+.apply {
+  display: flex;
+  justify-content: space-between;
+}
+#btn-apply {
+  width: 73px;
+  height: 28px;
+  background: #3fd28b;
+  box-shadow: 0px 4px 6px #0000003d;
+  opacity: 1;
+  border-style: none;
+  font: normal normal medium 14px/18px;
+  letter-spacing: 0px;
+  color: #25313f;
+  font-weight: 500;
+}
+.card {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card-body {
+  position: relative;
+}
+.card-title {
+  color: #0a0a0a;
+  font-weight: 600;
+}
+
+.date {
+  display: flex;
+}
+
+.date > time {
+  font-weight: 600;
+}
+.date > time,
+.date-text,
+.divider,
+.location {
+  padding-right: 15px;
+}
+.date-text {
+  font-weight: 500;
+  color: #969696;
+}
+.divider {
+  color: #c3c3c4;
+}
+.location {
+  color: #7a7c7e;
+}
+
+.job-role {
+  color: #7a7c7e;
+  font-weight: 500;
+}
+.roles {
+  display: flex;
+}
+.roles > div {
+  margin-right: 15px;
+}
+
+.Instructional {
+  display: flex;
+  align-items: center;
+  color: rgb(39, 39, 39);
+}
+
+.Instructional > img {
+  margin-bottom: 11px;
+  padding: 1px;
+  height: 25px;
+  border: 2px solid grey;
+  border-radius: 50px;
+}
+.Instructional > p {
+  padding-left: 10px;
+  color: #1f7a54;
+  font-weight: 600;
+  padding-top: 10px;
+}
+.internship {
+  background-color: #eedd6b;
+  display: inline-block;
+  padding: 3px 7px;
+  font-size: 13px;
+  border-radius: 10px;
+}
+
+.accordion-pre {
+  margin-top: -30px;
+}
+.accordion-header .accordion-button {
+  background-color: #dbefff;
+  height: 40px;
+}
+.accordion-button {
+  font-weight: bold;
+}
+.time {
+  padding: 0 50px;
+  margin-top: 30px;
+}
+
+.custom-radio input[type="radio"] {
+  display: none;
+}
+
+.custom-radio {
+  display: inline-block;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+
+  margin-bottom: -6px;
+}
+
+.custom-radio.checked {
+  background-image: url("spec/radio_button_checked_black_24dp.svg");
+  background-size: cover;
+}
+
+.custom-radio:not(.checked) {
+  background-image: url("spec/radio_button_unchecked_black_24dp.svg");
+  background-size: cover;
+}
+
+.radio {
+  margin-bottom: 15px;
+}
+
+.check {
+  margin-top: 15px;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  border: 2px solid #1f7a54;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: #137748;
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: #1f7a54;
+  border-color: #1f7a54;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+}
+
+file-upload {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 2px solid #1f7a54;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 250px;
+}
+
+.upload-icon {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.upload-text {
+  flex: 1;
+  text-align: right;
+  color: #1f7a54;
+  font-weight: 500;
+}
+
+/* Hide the default file input */
+.file-upload input[type="file"] {
+  display: none;
+}
+
+.Instructional-Designer {
+  padding: 10px 50px;
+}
+
+.accordion {
+  box-shadow: 0px 4px 6px #00000029;
+}
+
+.upword {
+  background-color: #3fd28b;
+  border-style: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  position: fixed;
+  bottom: 50px;
+  right: 55px;
+  z-index: 1111111;
+}
+
+.accordion-body {
+  font-weight: 590;
+}

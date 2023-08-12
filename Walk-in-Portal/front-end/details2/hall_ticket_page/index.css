@@ -1,0 +1,97 @@
+@font-face {
+  font-family: quicksand;
+  src: url(Quicksand-VariableFont_wght.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #eeeeee;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  height: 57px;
+  background: #1f2834;
+  opacity: 1;
+}
+.user {
+  width: 40px;
+  height: 40px;
+  background: #3c4e62;
+  border: 2px solid var(--primary-button-color, #3fd28b);
+  opacity: 1;
+  border-radius: 50%;
+}
+
+main {
+  margin-top: 100px;
+}
+.card-body {
+  position: relative;
+}
+.card-title {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  color: #222222;
+  display: flex;
+  justify-content: center;
+}
+
+.subtitle {
+  color: #666666;
+  font-size: 12px;
+}
+
+.card-content {
+  color: #222222;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.card-content P {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  width: fit-content;
+  box-shadow: 0px 3px 5px #0000003d;
+  width: 202px;
+  height: 28px;
+  border-style: none;
+  background-color: #3fd28b;
+  font-weight: 450;
+}
+
+.cheacked {
+  border-style: none;
+  background-color: #18be2e;
+  border-radius: 50%; /* To create a circular button */
+  width: 100px;
+  height: 100px;
+  padding: 0; /* Remove any default padding */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #eeeeee;
+  position: absolute;
+  top: -50px;
+}
+
+.cheacked > span {
+  font-size: 70px;
+}

@@ -1,0 +1,136 @@
+@font-face {
+  font-family: quicksand;
+  src: url(Quicksand-VariableFont_wght.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: quicksand;
+}
+
+body {
+  background: #eeeeee;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  height: 57px;
+  background: #1f2834;
+  opacity: 1;
+}
+
+.user {
+  width: 40px;
+  height: 40px;
+  background: #3c4e62;
+  border: 2px solid var(--primary-button-color, #3fd28b);
+  opacity: 1;
+  border-radius: 50%;
+}
+.box {
+  padding: 0 50px;
+  margin-bottom: 50px;
+}
+.card {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card-body {
+  position: relative;
+}
+.card-title {
+  color: #1f7a54;
+  font-weight: 600;
+}
+
+.date {
+  display: flex;
+}
+
+time {
+  font-weight: 600;
+}
+.date > time,
+.date-text,
+.divider,
+.location {
+  padding-right: 15px;
+}
+.divider {
+  color: #c3c3c4;
+}
+.location {
+  color: #7a7c7e;
+}
+.date-text {
+  color: #666666;
+}
+.job-role {
+  color: #7a7c7e;
+  font-weight: 500;
+}
+.roles {
+  display: flex;
+}
+.roles > div {
+  margin-right: 15px;
+}
+
+.Instructional {
+  display: flex;
+  align-items: center;
+  color: rgb(39, 39, 39);
+  font-weight: 600;
+}
+
+.Instructional > img {
+  margin-bottom: 11px;
+  padding: 1px;
+  height: 25px;
+  border: 2px solid grey;
+  border-radius: 50px;
+}
+.Instructional > p {
+  padding-left: 10px;
+  padding-top: 10px;
+}
+.internship {
+  background-color: #eedd6b;
+  display: inline-block;
+  padding: 3px 7px;
+  font-size: 10px;
+  border-radius: 10px;
+  font-weight: 550;
+}
+.border-bottom {
+  border-bottom: 1px solid rgb(212, 212, 212);
+}
+
+.btn-view {
+  text-align: center;
+  background: #3fd28b 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 5px #0000003d;
+  border-radius: 2px;
+  opacity: 1;
+  width: 168px;
+  height: 28px;
+  border-style: none;
+  margin: 10px;
+  font-weight: 500;
+}
+
+.expire {
+  position: absolute;
+  right: 30px;
+  top: -10px;
+  background-color: rgb(233, 181, 181);
+  color: rgb(201, 6, 6);
+  font-weight: 600;
+  font-size: 12px;
+  padding: 0 5px;
+  border-radius: 3px;
+}

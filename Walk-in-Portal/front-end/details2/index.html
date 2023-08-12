@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Details</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav class="navBar">
+      <img class="logo" src="spec/Zeus-LMS-logo.svg" alt="Logo" />
+      <img
+        class="user"
+        src="../../../Quantum_task/icons/account_circle.svg"
+        alt="User Account"
+      />
+    </nav>
+
+    <main>
+      <div class="container-fluid col-12 mt-5 box">
+        <div class="card text-bg-light mb-4">
+          <div class="card-body">
+            <div class="apply">
+              <h5 class="card-title" style="font-weight: bold">
+                Walk In for Multiple Job Roles
+              </h5>
+              <button id="btn-apply">APPLY</button>
+            </div>
+            <p class="card-text"></p>
+            <span class="date-text">Date & Time:</span>
+            <div class="date">
+              <time>10-Jul-2021 to 11-Jul-2021</time>
+              <p class="divider">|</p>
+              <p class="location">
+                <i
+                  ><img
+                    src="spec/location_on_black_24dp.svg"
+                    alt="Location"
+                    height="20px" /></i
+                >Mumbai
+              </p>
+            </div>
+            <p class="border-bottom"></p>
+            <div>
+              <span class="job-role">Job Role:</span>
+              <div class="roles">
+                <div class="Instructional">
+                  <img src="spec/Instructional.svg" />
+                  <p>Instructional Designer</p>
+                </div>
+                <p class="divider">|</p>
+                <div class="Instructional">
+                  <img src="spec/Instructional.svg" />
+                  <p>Softwere Engineer</p>
+                </div>
+                <p class="divider">|</p>
+                <div class="Instructional">
+                  <img src="spec/Software Quality Engineer.svg" />
+                  <p>Softwere quality Engineer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion accordion-pre" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Pre-requisites & Application Process
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <h6 style="color: #7a7c7e; font-size: small">
+                  General Instructions :
+                </h6>
+                <p>
+                  - We have a two–year indemnity for permanent candidates. We
+                  will provide training to the selected candidates. <br />-
+                  Candidates who have appeared for any test held by Zeus
+                  Learning in the past 12 months will not be allowed to appear
+                  for this recruitment test.
+                </p>
+                <p class="border-bottom"></p>
+                <h6 style="color: #7a7c7e; font-size: small">
+                  Instructions for the Exam :
+                </h6>
+                <p>
+                  - Candidates are requested to log in half an hour prior to the
+                  exam start time as they would need to capture their image
+                  using a web camera. By taking this test, you are permitting
+                  the examination system to capture your video for invigilation
+                  purposes. <br />- Candidates would not be able to appear for
+                  the exam if the web camera attached to their system is not
+                  functional. <br />- The web camera of your system must be
+                  enabled and must remain switched on throughout the
+                  examination. In the event of non-receipt of a webcam, your
+                  examination will be considered null and void. <br />
+                  - Candidate’s audio and video will be recorded during the
+                  examination and will also be monitored by a live proctor. The
+                  proctor may terminate your exam in case he/she observes any
+                  malpractice during the exam. <br />
+                  - Candidates are advised to use their own Laptop/PC with a
+                  stable internet connection (min 1 Mbps) during the exam.
+                  <br />
+                  - Candidates cannot use an iOS system/device for this exam.
+                </p>
+                <p class="border-bottom"></p>
+                <h6 style="color: #7a7c7e; font-size: small">
+                  Minimum System Requirements :
+                </h6>
+                <p>
+                  - Personal Laptop or Desktop computer in working condition
+                  with good quality camera (you can use Windows 7 and above).
+                  <br />
+                  - The latest version of Google Chrome Browser only. <br />
+                  - Please note that Internet speed should be minimum 1 Mbps.
+                  <br />
+                  - Do not use a MacBook or iPad for the proctored exam.
+                </p>
+                <p class="border-bottom"></p>
+                <h6 style="color: #7a7c7e; font-size: small">Process :</h6>
+                <p>
+                  - Every round is an elimination round. Candidates need to
+                  clear all rounds to get selected. <br /><br />
+                  Round I : 4th August, 2018 <br />
+                  Aptitude Test : 25 Questions <br /><br />
+                  Round II (Interview) : 4th August, 2018.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="time container-fluid">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">Time Slots & Preferences</h6>
+            <p style="color: #7a7c7e; font-size: small">Select a Time Slot :</p>
+            <form>
+              <div class="radio">
+                <label class="custom-radio" onclick="toggleRadio(this)">
+                  <input
+                    type="radio"
+                    name="radioGroup"
+                    value="9:00 AM to 11:00 AM<"
+                  />
+                </label>
+                &nbsp; &nbsp;<span style="font-weight: bold"
+                  >9:00 AM to 11:00 AM</span
+                >
+                <br />
+                <br />
+                <label class="custom-radio" onclick="toggleRadio(this)">
+                  <input
+                    type="radio"
+                    name="radioGroup"
+                    value="1:00 PM to 3:00 PM"
+                  />
+                </label>
+                &nbsp; &nbsp;<span style="font-weight: bold"
+                  >1:00 PM to 3:00 PM</span
+                >
+              </div>
+
+              <p class="border-bottom"></p>
+              <div class="check">
+                <p style="color: #7a7c7e; font-size: small">
+                  Select Your Preference :
+                </p>
+                <label class="checkbox-container">
+                  &nbsp; &nbsp;<span style="font-weight: bold"
+                    >Instructional Designer</span
+                  >
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-container">
+                  &nbsp; &nbsp;<span style="font-weight: bold"
+                    >Software Engineer</span
+                  >
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-container">
+                  &nbsp; &nbsp;<span style="font-weight: bold"
+                    >Software Quality Engineer</span
+                  >
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <p class="border-bottom"></p>
+              <label class="file-upload">
+                <span class="upload-icon"
+                  ><img src="spec/Upload_black_24dp.svg" alt=""
+                /></span>
+
+                <span class="upload-text">Upload Updated Resume</span>
+
+                <input type="file" />
+              </label>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="Instructional-Designer container-fluid">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Instructional-Designer
+              </button>
+            </h2>
+            <div
+              id="collapse"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <h6 style="color: #7a7c7e; font-size: small">
+                  Instructional-Designer
+                </h6>
+                <p>Rs. 5,00,000 lpa</p>
+                <p class="border-bottom"></p>
+                <h6 style="color: #7a7c7e; font-size: small">
+                  Role Description :
+                </h6>
+                <p>
+                  - Generate highly interactive and innovative instructional
+                  strategies for e-learning solutions<br />
+                  - Develop course structure and learning specifications
+                  addressing the requirements of the target audience <br />
+                  - Construct appropriate testing strategies to ensure learners'
+                  understanding and performance <br />- Address usability issues
+                  <br />
+                  - Keep abreast of new trends in e-learning <br />
+                  - Ensure that the instructional strategies are as per global
+                  standards <br />
+                  - Prepare instructional design checklists and guidelines -
+                  Check for quality assurance
+                </p>
+                <p class="border-bottom"></p>
+                <h6>Requirements :</h6>
+                <p>
+                  - Experience in creating instructional plans and course maps.
+                  <br />
+                  - Experience in the use of media like graphics, illustrations,
+                  photographs, audio, video, animations, and simulations in
+                  instruction <br />- Awareness of different instructional
+                  design models and familiarity with instructional and learning
+                  theories <br />
+                  - Awareness of latest trends in e-learning and instructional
+                  design <br />
+                  - Strong client consulting/interfacing skills. <br />
+                  - Ability to guide clients to focus on specific objectives and
+                  teaching points <br />
+                  - Strong meeting facilitation, presentation and interpersonal
+                  skills <br />
+                  - A thorough understanding of the web as an instructional
+                  medium <br />
+                  - Post graduate degree in Education, Instructional Design,
+                  Mass Communication or Journalism
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="Instructional-Designer container-fluid">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse2"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Software Engineer
+              </button>
+            </h2>
+            <div
+              id="collapse2"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <h6 style="color: #7a7c7e; font-size: small">
+                  Instructional-Designer
+                </h6>
+                <p>Rs. 5,00,000 lpa</p>
+                <p class="border-bottom"></p>
+                <h6 style="color: #7a7c7e; font-size: small">
+                  Role Description :
+                </h6>
+                <p>
+                  - Generate highly interactive and innovative instructional
+                  strategies for e-learning solutions<br />
+                  - Develop course structure and learning specifications
+                  addressing the requirements of the target audience <br />
+                  - Construct appropriate testing strategies to ensure learners'
+                  understanding and performance - Address usability issues
+                  <br />
+                  - Keep abreast of new trends in e-learning <br />
+                  - Ensure that the instructional strategies are as per global
+                  standards <br />
+                  - Prepare instructional design checklists and guidelines -
+                  Check for quality assurance
+                </p>
+                <p class="border-bottom"></p>
+                <h6>Requirements :</h6>
+                <p>
+                  - Experience in creating instructional plans and course maps.
+                  <br />
+                  - Experience in the use of media like graphics, illustrations,
+                  photographs, audio, video, animations, and simulations in
+                  instruction <br />- Awareness of different instructional
+                  design models and familiarity with instructional and learning
+                  theories <br />
+                  - Awareness of latest trends in e-learning and instructional
+                  design <br />
+                  - Strong client consulting/interfacing skills. <br />
+                  - Ability to guide clients to focus on specific objectives and
+                  teaching points <br />
+                  - Strong meeting facilitation, presentation and interpersonal
+                  skills <br />
+                  - A thorough understanding of the web as an instructional
+                  medium <br />
+                  - Post graduate degree in Education, Instructional Design,
+                  Mass Communication or Journalism
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="Instructional-Designer container-fluid">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapse3"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Software Quality Engineer
+              </button>
+            </h2>
+            <div
+              id="collapse3"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <h6 style="color: #7a7c7e; font-size: small">
+                  Instructional-Designer
+                </h6>
+                <p>Rs. 5,00,000 lpa</p>
+                <p class="border-bottom"></p>
+                <h6 style="color: #7a7c7e; font-size: small">
+                  Role Description :
+                </h6>
+                <p>
+                  - Generate highly interactive and innovative instructional
+                  strategies for e-learning solutions<br />
+                  - Develop course structure and learning specifications
+                  addressing the requirements of the target audience <br />
+                  - Construct appropriate testing strategies to ensure learners'
+                  understanding and performance - Address usability issues
+                  <br />
+                  - Keep abreast of new trends in e-learning <br />
+                  - Ensure that the instructional strategies are as per global
+                  standards <br />
+                  - Prepare instructional design checklists and guidelines -
+                  Check for quality assurance
+                </p>
+                <p class="border-bottom"></p>
+                <h6>Requirements :</h6>
+                <p>
+                  - Experience in creating instructional plans and course maps.
+                  <br />
+                  - Experience in the use of media like graphics, illustrations,
+                  photographs, audio, video, animations, and simulations in
+                  instruction <br />- Awareness of different instructional
+                  design models and familiarity with instructional and learning
+                  theories <br />
+                  - Awareness of latest trends in e-learning and instructional
+                  design <br />
+                  - Strong client consulting/interfacing skills. <br />
+                  - Ability to guide clients to focus on specific objectives and
+                  teaching points <br />
+                  - Strong meeting facilitation, presentation and interpersonal
+                  skills <br />
+                  - A thorough understanding of the web as an instructional
+                  medium <br />
+                  - Post graduate degree in Education, Instructional Design,
+                  Mass Communication or Journalism
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <button class="upword">
+      <a href="#">
+        <img src="spec/arrow_upward_black_24dp.svg" alt="" />
+      </a>
+    </button>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
