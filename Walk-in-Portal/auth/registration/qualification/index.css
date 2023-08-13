@@ -81,42 +81,41 @@ main {
   border-radius: 0px;
   border-bottom: 1px solid #9b9b9b;
   padding-left: 0;
+  padding-bottom: 0;
   font-weight: bold;
 }
-.border-bottom {
-  margin: 30px 0;
-  color: #9b9b9b;
-}
+
 .form-group {
   margin: 20px;
 }
 
-.form-group label:not(.file-upload) {
-  color: #666666;
-  font-size: 12px;
+.dropdowns {
+  margin: 3% 0 1% 0;
+  padding: 20px;
+}
+
+.custom-select {
+  display: flex;
+  padding-top: 10px;
+  justify-content: space-between;
+}
+
+.custom-select1 {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.custom-select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
   font-weight: bold;
-}
-
-.file-upload {
-  padding: 10px;
-}
-
-.upload-icon {
-  margin-right: 10px;
-  font-size: 24px;
-}
-
-.upload-text {
-  flex: 1;
-  text-align: right;
-  color: #1f7a54;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-/* Hide the default file input */
-.file-upload input[type="file"] {
-  display: none;
+  font-size: 16px;
+  width: 180%;
+  color: #333;
 }
 
 .checkbox-container {
@@ -176,23 +175,36 @@ main {
   border: solid white;
   border-width: 0 3px 3px 0;
 }
-
-.right-section {
+.form-group label:not(.file-upload) {
+  color: #666666;
+  font-weight: bold;
+}
+.choose-qualifications {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: absolute;
-  right: 0;
-  padding-top: 40px;
-  padding-right: 40px;
+  font-size: 16px;
+  color: #222222;
+  text-align: left;
+  margin: 20px 20px 20px 13px;
 }
 
-.right-section > img {
-  width: 112px;
-  height: 134px;
-  object-fit: contain;
+.cards {
+  padding: 0 12px;
 }
-
-.right-section > p {
-  font-size: 12px;
+.cards2 {
+  padding: 0 12px;
+}
+.form-check-input {
+  border: 2px solid #1f7a54;
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+}
+span {
+  font-size: 16px;
+  padding-left: 5px;
+  font-weight: bold;
+}
+.accordion-header .accordion-button {
+  background-color: #dbefff;
+  height: 56px;
 }

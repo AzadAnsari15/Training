@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navBar">
+      <img class="logo" src="spec/Zeus-LMS-logo.svg" alt="Logo" />
+    </nav>
+    <header>
+      <div>
+        <img
+          class="arrow"
+          src="spec/arrow_upward_black_24dp.svg"
+          onclick="redirectBackToQualificationPage()"
+        />
+        <p>Create An Account</p>
+        <div>
+          <button class="cancel">CANCEL</button>
+          <button class="create disabled">CREATE</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container-fluid mt-5">
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Educational"
+              >
+                Educational Qualifications
+              </button>
+            </h2>
+            <div
+              id="Educational"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <div class="row bg-white">
+                  <div class="row">
+                    <form>
+                      <div class="col-4">
+                        <div class="form-group">
+                          <label for="Percentage">Aggregate Percentage*</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="lastName"
+                            value="65"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-8"></div>
+                      <div class="col-4">
+                        <div class="dropdowns form-group">
+                          <div class="form-control">
+                            <label>Year of Passing*</label>
+                            <div class="custom-select">
+                              <select name="year" id="year">
+                                <option value disabled selected>2020</option>
+                              </select>
+                              <span> <img src="./arrow-down.svg" /></span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-8"></div>
+
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="dropdowns form-group">
+                            <div class="form-control">
+                              <label>Qualification*</label>
+                              <div class="custom-select">
+                                <select name="Qualification" id="Qualification">
+                                  <option
+                                    value="Bachelor in Technology (B.Tech)"
+                                    disabled
+                                    selected
+                                  >
+                                    Bachelor in Technology (B.Tech)
+                                  </option>
+                                </select>
+                                <span> <img src="./arrow-down.svg" /></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="dropdowns form-group">
+                            <div class="form-control">
+                              <label>Stream*</label>
+                              <div class="custom-select">
+                                <select name="Stream" id="Stream">
+                                  <option value disabled selected>
+                                    Information Technology
+                                  </option>
+                                </select>
+                                <span> <img src="./arrow-down.svg" /></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row align-items-center">
+                        <div class="col-6">
+                          <div class="dropdowns form-group">
+                            <div class="form-control">
+                              <label>College*</label>
+                              <div class="custom-select">
+                                <select name="College" id="College">
+                                  <option value disabled selected>2020</option>
+                                </select>
+                                <span> <img src="./arrow-down.svg" /></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6">
+                          <div class="form-group mb-1">
+                            <label for="college"
+                              >If others, please enter your college name</label
+                            >
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="college"
+                              value=""
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-3">
+                        <div class="form-group">
+                          <label for="location"
+                            >Where is your college located?*</label
+                          >
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="location"
+                            value="Watson"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-9"></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid mt-3 mb-3">
+        <div class="accordion" id="outerAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="experienceHeading">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#Professional"
+              >
+                Professional Qualifications
+              </button>
+            </h2>
+            <div
+              id="Professional"
+              class="accordion-collapse collapse"
+              aria-labelledby="experienceHeading"
+              data-bs-parent="#outerAccordion"
+            >
+              <div class="accordion-body">
+                <p style="color: #666666; font-size: 12px; font-weight: bold">
+                  Applicant Type*
+                </p>
+                <div class="choose-qualifications" style="margin: 0px">
+                  <label class="form-check-label d-block">
+                    <input
+                      type="radio"
+                      name="status"
+                      value="Fresher"
+                      class="form-check-input"
+                      id="fresherRadio"
+                    />
+                    <span> Fresher</span>
+                  </label>
+                  <label class="form-check-label d-block">
+                    <input
+                      type="radio"
+                      name="status"
+                      value="Experienced"
+                      class="form-check-input"
+                      style="margin-left: 10px"
+                      id="experiencedRadio"
+                    />
+                    <span> Experienced</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="container-fluid cards"
+        id="experiencedSection"
+        style="display: none"
+      >
+        <div class="container-fluid cards">
+          <div class="row bg-white">
+            <form>
+              <div class="col-4">
+                <div class="form-group mb-4">
+                  <label for="Experience">Years of Experience*</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="Experience"
+                    value="5"
+                  />
+                </div>
+              </div>
+              <div class="col-8"></div>
+              <div class="col-4">
+                <div class="form-group mb-4">
+                  <label for="current-CTC">Current CTC* (In Rupees)</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="current-CTC"
+                    value="5,00,000"
+                  />
+                </div>
+              </div>
+              <div class="col-8"></div>
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="expected-CTC">Expected CTC* (In Rupees)</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="expected-CTC"
+                    value="6,50,000"
+                  />
+                </div>
+              </div>
+              <div class="col-8"></div>
+              <div class="check">
+                <p style="color: #7a7c7e; font-size: small; font-weight: bold">
+                  Select All The Technologies You Expertise In*
+                </p>
+                <label class="checkbox-container">
+                  &nbsp; &nbsp;<span style="font-weight: bold">Javascript</span>
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-container">
+                  &nbsp; &nbsp;<span style="font-weight: bold">Angular JS</span>
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-container">
+                  &nbsp; &nbsp;<span style="font-weight: bold">React JS</span>
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">
+                  &nbsp; &nbsp;<span style="font-weight: bold">Node JS</span>
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">
+                  &nbsp; &nbsp;<span style="font-weight: bold">Others</span>
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="check">
+                <p style="color: #7a7c7e; font-size: small; font-weight: bold">
+                  Select All The Technologies You Are Familiar In
+                </p>
+                <label class="checkbox-container">
+                  &nbsp; &nbsp;<span style="font-weight: bold">Javascript</span>
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-container">
+                  &nbsp; &nbsp;<span style="font-weight: bold">Angular JS</span>
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-container">
+                  &nbsp; &nbsp;<span style="font-weight: bold">React JS</span>
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">
+                  &nbsp; &nbsp;<span style="font-weight: bold">Node JS</span>
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="checkbox-container">
+                  &nbsp; &nbsp;<span style="font-weight: bold">Others</span>
+                  <input type="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="others">If others, please mention</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="others"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div class="col-6"></div>
+
+              <div class="row">
+                <p
+                  class="col-6"
+                  style="padding-left: 25px; color: #666666; font-weight: bold"
+                >
+                  Are you currently on notice period?*
+                </p>
+                <div class="col-6 choose-qualifications">
+                  <label class="form-check-label d-block">
+                    <input
+                      type="radio"
+                      name="notice"
+                      value="Yes"
+                      class="form-check-input"
+                    />
+                    <span> Yes</span>
+                  </label>
+                  <label class="form-check-label d-block">
+                    <input
+                      type="radio"
+                      name="notice"
+                      value="No"
+                      class="form-check-input"
+                      style="margin-left: 10px"
+                    />
+                    <span> No</span>
+                  </label>
+                </div>
+              </div>
+              <div class="col-9"></div>
+
+              <div class="row align-items-center">
+                <div class="col-6">
+                  <div class="form-group">
+                    <label>If Yes, when will your notice period end?*</label>
+                    <input
+                      type="date"
+                      class="form-control"
+                      id="notice-end"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="dropdowns form-group">
+                    <div class="form-control">
+                      <label
+                        >How long is your notice period?* (Mention in
+                        months)</label
+                      >
+                      <div class="custom-select">
+                        <select name="length" id="length">
+                          <option value disabled selected>2 months</option>
+                        </select>
+                        <span> <img src="./arrow-down.svg" /></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <p
+                  class="col-6"
+                  style="padding-left: 25px; color: #666666; font-weight: bold"
+                >
+                  Have You Appeared For Any Test By Zeus in the past 12 months?*
+                </p>
+                <div class="col-6 choose-qualifications">
+                  <label class="form-check-label d-block">
+                    <input
+                      type="radio"
+                      name="notice"
+                      value="Yes"
+                      class="form-check-input"
+                    />
+                    <span> Yes</span>
+                  </label>
+                  <label class="form-check-label d-block">
+                    <input
+                      type="radio"
+                      name="notice"
+                      value="No"
+                      class="form-check-input"
+                      style="margin-left: 10px"
+                    />
+                    <span> No</span>
+                  </label>
+                </div>
+                <div class="col-9"></div>
+                <div class="col-6">
+                  <div class="form-group">
+                    <label for="notice-period"
+                      >If Yes, which role did you apply for?</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="notice-period"
+                      value=""
+                    />
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="cards2">
+        <div
+          class="container-fluid cards bg-white"
+          id="fresherSection"
+          style="display: none"
+        >
+          <form>
+            <div class="check">
+              <p style="color: #7a7c7e; font-size: small; font-weight: bold">
+                Select All The Technologies You Are Familiar In
+              </p>
+              <label class="checkbox-container">
+                &nbsp; &nbsp;<span style="font-weight: bold">Javascript</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="checkbox-container">
+                &nbsp; &nbsp;<span style="font-weight: bold">Angular JS</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+
+              <label class="checkbox-container">
+                &nbsp; &nbsp;<span style="font-weight: bold">React JS</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">
+                &nbsp; &nbsp;<span style="font-weight: bold">Node JS</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+              <label class="checkbox-container">
+                &nbsp; &nbsp;<span style="font-weight: bold">Others</span>
+                <input type="checkbox" />
+                <span class="checkmark"></span>
+              </label>
+            </div>
+            <div class="col-6">
+              <div class="form-group">
+                <label for="others">If others, please mention</label>
+                <input type="text" class="form-control" id="others" value="" />
+              </div>
+            </div>
+            <div class="col-6"></div>
+            <div class="row">
+              <p
+                class="col-6"
+                style="padding-left: 25px; color: #666666; font-weight: bold"
+              >
+                Have You Appeared For Any Test By Zeus in the past 12 months?*
+              </p>
+              <div class="col-6 choose-qualifications">
+                <label class="form-check-label d-block">
+                  <input
+                    type="radio"
+                    name="notice"
+                    value="Yes"
+                    class="form-check-input"
+                  />
+                  <span> Yes</span>
+                </label>
+                <label class="form-check-label d-block">
+                  <input
+                    type="radio"
+                    name="notice"
+                    value="No"
+                    class="form-check-input"
+                    style="margin-left: 10px"
+                  />
+                  <span> No</span>
+                </label>
+              </div>
+              <div class="col-9"></div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="notice-period"
+                    >If Yes, which role did you apply for?</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="notice-period"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <center>
+        <button class="next" onclick="redirectBackToQualificationPage()">
+          PREVIOUS
+        </button>
+        <button class="next" onclick="redirectTofinal()">Next</button>
+      </center>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function redirectBackToQualificationPage() {
+        // Redirect the user to the qualification page
+        window.location.href = "/Walk-in-Portal/auth/registration/";
+      }
+      function redirectTofinal() {
+        // Redirect the user to the qualification page
+        window.location.href = "/Walk-in-Portal/auth/registration/final-page";
+      }
+
+      const fresherRadio = document.getElementById("fresherRadio");
+      const experiencedRadio = document.getElementById("experiencedRadio");
+      const fresherSection = document.getElementById("fresherSection");
+      const experiencedSection = document.getElementById("experiencedSection");
+
+      fresherRadio.addEventListener("change", () => {
+        fresherSection.style.display = "block";
+        experiencedSection.style.display = "none";
+      });
+
+      experiencedRadio.addEventListener("change", () => {
+        fresherSection.style.display = "none";
+        experiencedSection.style.display = "block";
+      });
+    </script>
+  </body>
+</html>
