@@ -3,9 +3,226 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Registration</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    final
+    <nav class="navBar">
+      <img class="logo" src="spec/Zeus-LMS-logo.svg" alt="Logo" />
+    </nav>
+    <header>
+      <div>
+        <img
+          class="arrow"
+          src="spec/arrow_upward_black_24dp.svg"
+          onclick="redirectBackToQualificationPage()"
+        />
+        <p>Create An Account</p>
+        <div>
+          <button class="cancel">CANCEL</button>
+          <button class="create disabled">CREATE</button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="cards">
+        <div class="heading">
+          <p>Personal Information</p>
+          <p class="edit">Edit</p>
+        </div>
+        <div class="row bg-white">
+          <div class="col-6 p-4">
+            <div class="content">
+              <h6>First Name</h6>
+              <p>John</p>
+            </div>
+            <div class="content">
+              <h6>Last Name</h6>
+              <p>Watson</p>
+            </div>
+            <div class="content">
+              <h6>Email</h6>
+              <p>Johnwatson@example.com</p>
+            </div>
+            <div class="content">
+              <h6>Phone Number</h6>
+              <p>+91 9876543210</p>
+            </div>
+            <div class="resume">
+              <img src="spec/Upload_black_24dp.svg" />
+              <span>Upload Resume</span>
+              <span>MyResume.pdf</span>
+            </div>
+            <div class="content">
+              <h6>Enter Portfolio URL (if any)</h6>
+              <p>www.myportfolio.in</p>
+            </div>
+            <div class="content">
+              <h6>Preferred Job Roles</h6>
+              <p style="margin: 0; padding: 0">Instructional Designer</p>
+              <p>Software Quality Engineer</p>
+            </div>
+            <div class="content">
+              <h6>
+                If You Are Registering Via A Referral, Please Mention Full Name
+                Of The Employee Who Referred You
+              </h6>
+              <p>-</p>
+            </div>
+            <div class="cheack">
+              <img src="spec/check_box_black_24dp.svg" alt="" />
+              <span>Send me job related updates via mail</span>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="profile">
+              <img src="spec/profile.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+        <div class="heading">
+          <p>Qualifications</p>
+          <p class="edit">Edit</p>
+        </div>
+        <div class="row bg-white">
+          <div class="title">Educational Qualifications</div>
+          <div class="col-12 p-4">
+            <div class="content">
+              <h6>Aggregate Percentage</h6>
+              <p>65</p>
+            </div>
+            <div class="content">
+              <h6>Year of Passing</h6>
+              <p>2020</p>
+            </div>
+            <div class="row">
+              <div class="content col-6">
+                <h6>Qualification</h6>
+                <p>Bachelor in Technology (B.Tech)</p>
+              </div>
+              <div class="content col-6">
+                <h6>Stream</h6>
+                <p>Information Technology</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="content col-6">
+                <h6>College</h6>
+                <p>Pune Institute of Technology (PIT)</p>
+              </div>
+              <div class="content col-6">
+                <h6>If others, please enter your college name</h6>
+                <p>-</p>
+              </div>
+            </div>
+            <div class="content">
+              <h6>Where is your college located?</h6>
+              <p>Pune</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards mt-4">
+        <div class="row bg-white">
+          <div class="title">Professional Qualifications</div>
+          <div class="col-12 p-4">
+            <div class="content">
+              <h6>Applicant Type</h6>
+              <p>Experienced</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards mt-4">
+        <div class="row bg-white">
+          <div class="col-12 p-4">
+            <div class="content">
+              <h6>Years of Experience</h6>
+              <p>5</p>
+            </div>
+            <div class="content">
+              <h6>Current CTC (In Rupees)</h6>
+              <p>5,00,000</p>
+            </div>
+            <div class="content">
+              <h6>Expected CTC (In Rupees)</h6>
+              <p>6,50,000</p>
+            </div>
+            <div class="content">
+              <h6>Select All The Technologies You Expertise In</h6>
+              <p>Javascript</p>
+            </div>
+            <div class="content">
+              <h6>If others, please mention</h6>
+              <p>-</p>
+            </div>
+            <div class="content">
+              <h6>Select All The Technologies You are familiar In</h6>
+              <p>Angular JS</p>
+              <p>React</p>
+            </div>
+            <div class="content">
+              <h6>If others, please mention</h6>
+              <p>-</p>
+            </div>
+            <div class="content">
+              <h6>Are you currently on notice period?</h6>
+              <p>Yes</p>
+            </div>
+            <div class="row">
+              <div class="content col-6">
+                <h6>If Yes, when will your notice period end?</h6>
+                <p>20-May-2020</p>
+              </div>
+              <div class="content col-6">
+                <h6>How long is your notice period? (Mention in months)</h6>
+                <p>2 Months</p>
+              </div>
+            </div>
+            <div class="content">
+              <h6>
+                Have You Appeared For Any Test By Zeus in the past 12 months?
+              </h6>
+              <p>No</p>
+            </div>
+            <div class="content">
+              <h6>If Yes, which role did you apply for?</h6>
+              <p>-</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <center>
+        <button class="next" onclick="redirectBackToQualificationPage()">
+          PREVIOUS
+        </button>
+      </center>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function redirectBackToQualificationPage() {
+        // Redirect the user to the qualification page
+        window.location.href =
+          "/Walk-in-Portal/auth/registration/qualification";
+      }
+    </script>
   </body>
 </html>

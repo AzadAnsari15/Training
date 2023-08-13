@@ -1,0 +1,122 @@
+@font-face {
+  font-family: quicksand;
+  src: url(Quicksand-VariableFont_wght.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: quicksand;
+}
+
+body {
+  background: #eeeeee;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+  height: 57px;
+  background: #1f2834;
+  opacity: 1;
+}
+
+.arrow {
+  transform: rotate(270deg);
+}
+.create,
+.cancel {
+  background-color: #3fd28b;
+  border-style: none;
+  width: 90px;
+  height: 28px;
+  box-shadow: 0px 3px 5px #0000003d;
+  border-radius: 2px;
+  font-weight: 550;
+}
+.next {
+  background-color: #3fd28b;
+  border-style: none;
+  width: 90px;
+  height: 28px;
+  box-shadow: 0px 3px 5px #0000003d;
+  border-radius: 2px;
+  font-weight: 550;
+  margin: 20px;
+}
+.disabled {
+  background-color: #3b8863;
+  color: #1f2834;
+  cursor: not-allowed;
+  opacity: ;
+}
+
+header {
+  background-color: #3c4e62;
+}
+header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header div > p {
+  padding-top: 10px;
+  color: #eeeeee;
+}
+main {
+  padding: 0 50px;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.edit {
+  color: #1f7a54;
+}
+
+.content > h6 {
+  font-size: 13px;
+  color: #666666;
+}
+.content > p {
+  font-size: 16px;
+  color: #222222;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+.resume {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+  font-size: 16px;
+  font-weight: 500;
+}
+.resume > span {
+  padding-right: 5px;
+}
+
+.profile > img {
+  border-radius: 550px;
+  position: absolute;
+  right: 0;
+  margin: 20px 20px 0 0;
+}
+.profile {
+  position: relative;
+}
+
+.title {
+  background-color: #dbefff;
+
+  padding: 15px 10px;
+}
