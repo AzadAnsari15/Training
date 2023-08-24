@@ -5,17 +5,23 @@ using Backend.Models;
 [Route("api/[controller]")]
 public class JobRoleApiController : ControllerBase
 {
-    [HttpGet("GetAll")]
-    public IActionResult GetAllJobRoles()
+    private readonly IJobRoleService _jobRoleService;
+    public JobRoleApiController(IJobRoleService jobRoleService)
     {
-        var mockJobRoles = MockJobRoleData.GetMockJobRoles();
-        return Ok(mockJobRoles);
+        _jobRoleService = jobRoleService;
+    }
+
+    [HttpGet("GetAll")]
+    public async Task<IActionResult> GetAllJobRoles()
+    {
+
+        return Ok(await _jobRoleService.GetAllJobRoles());
     }
     [HttpGet("{id}")]
-    public IActionResult GetSingleJobRoles(int id)
+    public async Task<IActionResult> GetSingleJobRoles(int id)
     {
-        var mockJobRoles = MockJobRoleData.GetMockJobRoles();
-        return Ok(mockJobRoles.FirstOrDefault(j => j.Id == id));
+
+        return Ok(await _jobRoleService.GetSingleJobRoles(id));
     }
 
     // Other actions for getting specific job roles, adding, updating, and deleting.

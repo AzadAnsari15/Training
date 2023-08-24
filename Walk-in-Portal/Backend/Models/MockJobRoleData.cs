@@ -16,8 +16,8 @@ namespace Backend.Models
                     Id = 1,
                     Title = "Walk In for Designer Job Role",
                     DaysToExpire = 5,
-                    StartDate = DateTime.Parse("2021-07-10"),
-                    EndDate = DateTime.Parse("2021-07-11"),
+                    StartDate = DateTime.Parse("2021-07-10").Date, // Only date part
+                    EndDate = DateTime.Parse("2021-07-11").Date,   // Only date part
                     Location = "Mumbai",
                     Roles = new List<RoleModel>
                     {
@@ -28,9 +28,9 @@ namespace Backend.Models
                 {
                     Id = 2,
                     Title = "Walk In for Multiple Job Roles",
-                    DaysToExpire = 1,
-                    StartDate = DateTime.Parse("2021-07-03"),
-                    EndDate = DateTime.Parse("2021-07-04"),
+
+                    StartDate = DateTime.Parse("2021-07-03").Date, // Only date part
+                    EndDate = DateTime.Parse("2021-07-04").Date,   // Only date part
                     Location = "Mumbai",
                     Roles = new List<RoleModel>
                     {
@@ -44,9 +44,9 @@ namespace Backend.Models
                 {
                     Id = 3,
                     Title = "Walk In for Design and Development Job Role",
-                    DaysToExpire = 5,
-                    StartDate = DateTime.Parse("2021-07-10"),
-                    EndDate = DateTime.Parse("2021-07-11"),
+
+                    StartDate = DateTime.Parse("2021-07-10").Date, // Only date part
+                    EndDate = DateTime.Parse("2021-07-11").Date,   // Only date part
                     Location = "Mumbai",
                     Roles = new List<RoleModel>
                     {
