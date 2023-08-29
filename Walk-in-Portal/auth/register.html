@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <form id="registrationForm">
+      <h2>Educational Information</h2>
+      <label for="qualification">Qualification:</label>
+      <input type="text" id="qualification" name="qualification" /><br /><br />
+
+      <label for="stream">Stream:</label>
+      <input type="text" id="stream" name="stream" /><br /><br />
+
+      <label for="college">College:</label>
+      <input type="text" id="college" name="college" /><br /><br />
+
+      <label for="collegeLocation">College Location:</label>
+      <input
+        type="text"
+        id="collegeLocation"
+        name="collegeLocation"
+      /><br /><br />
+
+      <h2>Professional Information</h2>
+      <label for="isExperienced">Experienced:</label>
+      <input
+        type="checkbox"
+        id="isExperienced"
+        name="isExperienced"
+      /><br /><br />
+
+      <label for="yearsOfExperience">Years of Experience:</label>
+      <input
+        type="number"
+        id="yearsOfExperience"
+        name="yearsOfExperience"
+      /><br /><br />
+
+      <label for="currentCTC">Current CTC:</label>
+      <input type="number" id="currentCTC" name="currentCTC" /><br /><br />
+
+      <label for="expectedCTC">Expected CTC:</label>
+      <input type="number" id="expectedCTC" name="expectedCTC" /><br /><br />
+
+      <label for="expertiseTechnologies">Expertise Technologies:</label>
+      <input
+        type="text"
+        id="expertiseTechnologies"
+        name="expertiseTechnologies"
+      /><br /><br />
+
+      <label for="familiarTechnologies">Familiar Technologies:</label>
+      <input
+        type="text"
+        id="familiarTechnologies"
+        name="familiarTechnologies"
+      /><br /><br />
+
+      <label for="isOnNoticePeriod">On Notice Period:</label>
+      <input
+        type="checkbox"
+        id="isOnNoticePeriod"
+        name="isOnNoticePeriod"
+      /><br /><br />
+
+      <label for="noticePeriodEndDate">Notice Period End Date:</label>
+      <input
+        type="date"
+        id="noticePeriodEndDate"
+        name="noticePeriodEndDate"
+      /><br /><br />
+
+      <label for="noticePeriodLengthMonths"
+        >Notice Period Length (Months):</label
+      >
+      <input
+        type="number"
+        id="noticePeriodLengthMonths"
+        name="noticePeriodLengthMonths"
+      /><br /><br />
+
+      <label for="appearedForZeusTest">Appeared for Zeus Test:</label>
+      <input
+        type="checkbox"
+        id="appearedForZeusTest"
+        name="appearedForZeusTest"
+      /><br /><br />
+
+      <label for="appliedRole">Applied Role:</label>
+      <input type="text" id="appliedRole" name="appliedRole" /><br /><br />
+
+      <button type="submit">Register</button>
+    </form>
+
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const formData = {
+            educational: {
+              qualification: document.getElementById("qualification").value,
+              stream: document.getElementById("stream").value,
+              college: document.getElementById("college").value,
+              collegeLocation: document.getElementById("collegeLocation").value,
+            },
+            professional: {
+              isExperienced: document.getElementById("isExperienced").checked,
+              yearsOfExperience: parseInt(
+                document.getElementById("yearsOfExperience").value
+              ),
+              currentCTC: parseFloat(
+                document.getElementById("currentCTC").value
+              ),
+              expectedCTC: parseFloat(
+                document.getElementById("expectedCTC").value
+              ),
+              expertiseTechnologies: [
+                document.getElementById("expertiseTechnologies").value,
+              ],
+              familiarTechnologies: [
+                document.getElementById("familiarTechnologies").value,
+              ],
+              isOnNoticePeriod:
+                document.getElementById("isOnNoticePeriod").checked,
+              noticePeriodEndDate: document.getElementById(
+                "noticePeriodEndDate"
+              ).value,
+              noticePeriodLengthMonths: parseInt(
+                document.getElementById("noticePeriodLengthMonths").value
+              ),
+              appearedForZeusTest: document.getElementById(
+                "appearedForZeusTest"
+              ).checked,
+              appliedRole: document.getElementById("appliedRole").value,
+            },
+          };
+          console.log(formData);
+          // Make an HTTP POST request to the registration API endpoint
+          fetch("http://localhost:5068/api/Register/register", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          })
+            .then((response) => response.json())
+            .then((data) => {
+              console.log("Registration successful:", data);
+              // Handle success response here
+            })
+            .catch((error) => {
+              console.error("Registration failed:", error);
+              // Handle error here
+            });
+        });
+    </script>
+  </body>
+</html>

@@ -64,7 +64,7 @@
                           <input
                             type="text"
                             class="form-control"
-                            id="lastName"
+                            id="aggregatePercentage"
                             value="65"
                           />
                         </div>
@@ -76,7 +76,7 @@
                             <label>Year of Passing*</label>
                             <div class="custom-select">
                               <select name="year" id="year">
-                                <option value disabled selected>2020</option>
+                                <option id="year" selected>2020</option>
                               </select>
                               <span> <img src="./arrow-down.svg" /></span>
                             </div>
@@ -92,11 +92,7 @@
                               <label>Qualification*</label>
                               <div class="custom-select">
                                 <select name="Qualification" id="Qualification">
-                                  <option
-                                    value="Bachelor in Technology (B.Tech)"
-                                    disabled
-                                    selected
-                                  >
+                                  <option id="Qualification" selected>
                                     Bachelor in Technology (B.Tech)
                                   </option>
                                 </select>
@@ -111,7 +107,7 @@
                               <label>Stream*</label>
                               <div class="custom-select">
                                 <select name="Stream" id="Stream">
-                                  <option value disabled selected>
+                                  <option id="Stream" selected>
                                     Information Technology
                                   </option>
                                 </select>
@@ -129,7 +125,7 @@
                               <label>College*</label>
                               <div class="custom-select">
                                 <select name="College" id="College">
-                                  <option value disabled selected>2020</option>
+                                  <option id="College" selected>2020</option>
                                 </select>
                                 <span> <img src="./arrow-down.svg" /></span>
                               </div>
@@ -275,61 +271,59 @@
                 </p>
                 <label class="checkbox-container">
                   &nbsp; &nbsp;<span style="font-weight: bold">Javascript</span>
-                  <input type="checkbox" />
+                  <input type="checkbox" id="experiencedSection" />
                   <span class="checkmark"></span>
                 </label>
-
                 <label class="checkbox-container">
                   &nbsp; &nbsp;<span style="font-weight: bold">Angular JS</span>
-                  <input type="checkbox" />
+                  <input type="checkbox" id="experiencedSection" />
                   <span class="checkmark"></span>
                 </label>
-
                 <label class="checkbox-container">
                   &nbsp; &nbsp;<span style="font-weight: bold">React JS</span>
-                  <input type="checkbox" />
+                  <input type="checkbox" id="experiencedSection" />
                   <span class="checkmark"></span>
                 </label>
                 <label class="checkbox-container">
                   &nbsp; &nbsp;<span style="font-weight: bold">Node JS</span>
-                  <input type="checkbox" />
+                  <input type="checkbox" id="experiencedSection" />
                   <span class="checkmark"></span>
                 </label>
                 <label class="checkbox-container">
                   &nbsp; &nbsp;<span style="font-weight: bold">Others</span>
-                  <input type="checkbox" />
+                  <input type="checkbox" id="experiencedSection" />
                   <span class="checkmark"></span>
                 </label>
               </div>
-              <div class="check">
+              <div class="check famili">
                 <p style="color: #7a7c7e; font-size: small; font-weight: bold">
                   Select All The Technologies You Are Familiar In
                 </p>
                 <label class="checkbox-container">
                   &nbsp; &nbsp;<span style="font-weight: bold">Javascript</span>
-                  <input type="checkbox" />
+                  <input type="checkbox" id="familiarSection" />
                   <span class="checkmark"></span>
                 </label>
 
                 <label class="checkbox-container">
                   &nbsp; &nbsp;<span style="font-weight: bold">Angular JS</span>
-                  <input type="checkbox" />
+                  <input type="checkbox" id="familiarSection" />
                   <span class="checkmark"></span>
                 </label>
 
                 <label class="checkbox-container">
                   &nbsp; &nbsp;<span style="font-weight: bold">React JS</span>
-                  <input type="checkbox" />
+                  <input type="checkbox" id="familiarSection" />
                   <span class="checkmark"></span>
                 </label>
                 <label class="checkbox-container">
                   &nbsp; &nbsp;<span style="font-weight: bold">Node JS</span>
-                  <input type="checkbox" />
+                  <input type="checkbox" id="familiarSection" />
                   <span class="checkmark"></span>
                 </label>
                 <label class="checkbox-container">
                   &nbsp; &nbsp;<span style="font-weight: bold">Others</span>
-                  <input type="checkbox" />
+                  <input type="checkbox" id="familiarSection" />
                   <span class="checkmark"></span>
                 </label>
               </div>
@@ -397,8 +391,8 @@
                         months)</label
                       >
                       <div class="custom-select">
-                        <select name="length" id="length">
-                          <option value disabled selected>2 months</option>
+                        <select name="length">
+                          <option id="length" selected>2 months</option>
                         </select>
                         <span> <img src="./arrow-down.svg" /></span>
                       </div>
@@ -417,7 +411,7 @@
                   <label class="form-check-label d-block">
                     <input
                       type="radio"
-                      name="notice"
+                      name="appearedForTest"
                       value="Yes"
                       class="form-check-input"
                     />
@@ -426,7 +420,7 @@
                   <label class="form-check-label d-block">
                     <input
                       type="radio"
-                      name="notice"
+                      name="appearedForTest"
                       value="No"
                       class="form-check-input"
                       style="margin-left: 10px"
@@ -549,7 +543,9 @@
         <button class="next" onclick="redirectBackToQualificationPage()">
           PREVIOUS
         </button>
-        <button class="next" onclick="redirectTofinal()">Next</button>
+        <button class="next" id="submitButtonId" onclick="redirectTofinal()">
+          Next
+        </button>
       </center>
     </main>
     <script
@@ -557,30 +553,7 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
-    <script>
-      function redirectBackToQualificationPage() {
-        // Redirect the user to the qualification page
-        window.location.href = "/Walk-in-Portal/auth/registration/";
-      }
-      function redirectTofinal() {
-        // Redirect the user to the qualification page
-        window.location.href = "/Walk-in-Portal/auth/registration/final-page";
-      }
 
-      const fresherRadio = document.getElementById("fresherRadio");
-      const experiencedRadio = document.getElementById("experiencedRadio");
-      const fresherSection = document.getElementById("fresherSection");
-      const experiencedSection = document.getElementById("experiencedSection");
-
-      fresherRadio.addEventListener("change", () => {
-        fresherSection.style.display = "block";
-        experiencedSection.style.display = "none";
-      });
-
-      experiencedRadio.addEventListener("change", () => {
-        fresherSection.style.display = "none";
-        experiencedSection.style.display = "block";
-      });
-    </script>
+    <script src="./index.js"></script>
   </body>
 </html>

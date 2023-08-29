@@ -17,23 +17,27 @@
     ></script>
   </head>
   <body>
-    <nav class="navBar">
+    <nav class="navbar">
       <img class="logo" src="spec/Zeus-LMS-logo.svg" alt="Logo" />
     </nav>
     <header>
       <div>
-        <img class="arrow" src="spec/arrow_upward_black_24dp.svg" />
-        <p>Create An Account</p>
+        <img
+          class="arrow"
+          src="spec/arrow_upward_black_24dp.svg"
+          alt="Up Arrow"
+        />
+        <p>Create an Account</p>
         <div>
-          <button class="cancel">CANCEL</button>
-          <button class="create disabled">CREATE</button>
+          <button class="cancel">Cancel</button>
+          <button class="create disabled">Create</button>
         </div>
       </div>
     </header>
     <main>
       <div class="row bg-white">
         <div class="col-6">
-          <form>
+          <form id="registrationForm">
             <div class="form-group">
               <label for="firstName">First Name</label>
               <input
@@ -68,7 +72,6 @@
                 <input
                   type="tel"
                   class="form-control"
-                  id="phoneNumber"
                   value="91"
                   style="width: 25px; margin-right: 20px"
                 />
@@ -82,19 +85,17 @@
             </div>
             <label class="file-upload">
               <span class="upload-icon"
-                ><img src="spec/Upload_black_24dp.svg" alt=""
+                ><img src="spec/Upload_black_24dp.svg" alt="Upload Icon"
               /></span>
-
               <span class="upload-text">Upload Resume</span>
-
               <input type="file" />
             </label>
             <div class="form-group">
-              <label for="url">Enter Portfolio URL (if any)</label>
+              <label for="portfolioUrl">Enter Portfolio URL (if any)</label>
               <input
-                type="url"
+                type="text"
                 class="form-control"
-                id="email"
+                id="portfolioUrl"
                 value="www.myportfolio.in"
               />
             </div>
@@ -103,45 +104,38 @@
                 Preferred Job Roles*
               </p>
               <label class="checkbox-container">
-                &nbsp; &nbsp;<span style="font-weight: bold"
-                  >Instructional Designer</span
-                >
-                <input type="checkbox" />
+                <span style="font-weight: bold">Instructional Designer</span>
+                <input type="checkbox" id="isInstructionalDesigner" />
                 <span class="checkmark"></span>
               </label>
-
               <label class="checkbox-container">
-                &nbsp; &nbsp;<span style="font-weight: bold"
-                  >Software Engineer</span
-                >
-                <input type="checkbox" />
+                <span style="font-weight: bold">Software Engineer</span>
+                <input type="checkbox" id="isSoftwareEngineer" />
                 <span class="checkmark"></span>
               </label>
-
               <label class="checkbox-container">
-                &nbsp; &nbsp;<span style="font-weight: bold"
-                  >Software Quality Engineer</span
-                >
-                <input type="checkbox" />
+                <span style="font-weight: bold">Software Quality Engineer</span>
+                <input type="checkbox" id="isSoftwareQualityEngineer" />
                 <span class="checkmark"></span>
               </label>
               <p
                 style="
                   font-size: 12px;
-                  margin: 30px 0;
+                  margin-top: 30px;
                   font-weight: 600;
                   color: #7a7c7e;
                 "
               >
-                If You Are Registering Via A Referral, Please Mention Full Name
-                Of The Employee Who Referred You
+                If you are registering via a referral, please mention the full
+                name of the employee who referred you.
               </p>
-              <p class="border-bottom"></p>
+              <input type="text" class="form-control" id="referralEmployee" />
+              <br />
               <label class="checkbox-container">
-                &nbsp; &nbsp;<span style="font-weight: bold"
-                  >Send me job related updates via mail</span
+                <span style="font-weight: bold"
+                  >Send me job-related updates via email</span
                 >
-                <input type="checkbox" />
+                <input type="checkbox" id="sendJobUpdates" required />
                 <span class="checkmark"></span>
               </label>
             </div>
@@ -149,10 +143,9 @@
         </div>
         <div class="col-6" style="position: relative">
           <div class="right-section">
-            <img src="avatar.png" />
+            <img src="avatar.png" alt="Avatar" />
             <label class="file-upload">
-              <span class="upload-text">UPLOAD DISPLAY PICTURE</span>
-
+              <span class="upload-text">Upload Display Picture</span>
               <input type="file" />
             </label>
             <p>Max. image size: 5 MB</p>
@@ -160,9 +153,7 @@
         </div>
       </div>
       <center>
-        <button class="next" onclick="redirectToQualificationPage()">
-          Next
-        </button>
+        <button class="next" type="submit" form="registrationForm">Next</button>
       </center>
     </main>
     <script
@@ -171,10 +162,73 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      function redirectToQualificationPage() {
-        // Redirect the user to the qualification page
-        window.location.href = "qualification";
-      }
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("registrationForm");
+
+        form.addEventListener("submit", async function (event) {
+          event.preventDefault();
+
+          // Get values using IDs or classes
+          const firstName = document.getElementById("firstName").value;
+          const lastName = document.getElementById("lastName").value;
+          const email = document.getElementById("email").value;
+          const phoneNumber = document.getElementById("phoneNumber").value;
+          const portfolioUrl = document.getElementById("portfolioUrl").value;
+          const isInstructionalDesigner = document.getElementById(
+            "isInstructionalDesigner"
+          ).checked;
+          const isSoftwareEngineer =
+            document.getElementById("isSoftwareEngineer").checked;
+          const isSoftwareQualityEngineer = document.getElementById(
+            "isSoftwareQualityEngineer"
+          ).checked;
+
+          const sendJobUpdates =
+            document.getElementById("sendJobUpdates").checked;
+          const referralEmployee =
+            document.getElementById("referralEmployee").value;
+
+          // Create an object with form data
+          const formDataObject = {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+
+            phoneNumber: phoneNumber,
+            resumeUpload: "null",
+            portfolioURL: portfolioUrl,
+            isInstructionalDesigner: isInstructionalDesigner,
+            isSoftwareEngineer: isSoftwareEngineer,
+            isSoftwareQualityEngineer: isSoftwareQualityEngineer,
+            referralEmployee: referralEmployee,
+            sendJobUpdates: sendJobUpdates,
+            displayPictureUpload: "null",
+          };
+
+          try {
+            const response = await fetch(
+              "http://localhost:5199/api/Registration",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formDataObject),
+              }
+            );
+
+            if (response.ok) {
+              console.log("Form submitted successfully!");
+              // Redirect the user after successful submission
+              redirectToQualificationPage();
+            } else {
+              console.error("Error submitting form:", response.statusText);
+            }
+          } catch (error) {
+            console.error("An error occurred:", error);
+          }
+        });
+      });
     </script>
   </body>
 </html>

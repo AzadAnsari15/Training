@@ -11,14 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-fetch("http://localhost:5068/api/JobRoleApi/GetAll")
+fetch("http://localhost:5199/api/Walkinlist")
   .then((response) => response.json())
   .then((jobRolesData) => {
     // Rename the variable here
     const jobRolesContainer = document.getElementById("jobRolesContainer");
 
     // Loop through the jobRolesData and generate HTML for each job role
-    jobRolesData.data.forEach((jobRole) => {
+    jobRolesData.forEach((jobRole) => {
       const jobRoleDiv = document.createElement("div");
       jobRoleDiv.className = "col-12 job-role";
 
