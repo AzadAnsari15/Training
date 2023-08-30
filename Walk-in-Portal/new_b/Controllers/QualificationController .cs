@@ -29,14 +29,15 @@ namespace Backend.Controllers
                             "INSERT INTO educationalqualification (AggregatePercentage, YearOfPassing, Qualification, Stream, College, CollegeLocation) " +
                             "VALUES (@AggregatePercentage, @YearOfPassing, @Qualification, @Stream, @College, @CollegeLocation);", connection))
                         {
-                            eduCommand.Parameters.AddWithValue("@AggregatePercentage", request.Educational.AggregatePercentage);
-                            eduCommand.Parameters.AddWithValue("@YearOfPassing", request.Educational.YearOfPassing);
-                            eduCommand.Parameters.AddWithValue("@Qualification", request.Educational.Qualification);
-                            eduCommand.Parameters.AddWithValue("@Stream", request.Educational.Stream);
-                            eduCommand.Parameters.AddWithValue("@College", request.Educational.College);
-                            eduCommand.Parameters.AddWithValue("@CollegeLocation", request.Educational.CollegeLocation);
+                            eduCommand.Parameters.AddWithValue("@AggregatePercentage", request?.Educational?.AggregatePercentage);
+                            eduCommand.Parameters.AddWithValue("@YearOfPassing", request?.Educational?.YearOfPassing);
+                            eduCommand.Parameters.AddWithValue("@Qualification", request?.Educational?.Qualification);
+                            eduCommand.Parameters.AddWithValue("@Stream", request?.Educational?.Stream);
+                            eduCommand.Parameters.AddWithValue("@College", request?.Educational?.College);
+                            eduCommand.Parameters.AddWithValue("@CollegeLocation", request?.Educational?.CollegeLocation);
 
                             await eduCommand.ExecuteNonQueryAsync();
+#nullable disable
                             request.Educational.Id = (int)eduCommand.LastInsertedId;
                         }
 

@@ -41,6 +41,7 @@ namespace new_b.Controllers
                     string timeslot;
                     using (MySqlCommand timeslotCommand = new MySqlCommand(timeslotQuery, connection))
                     {
+#nullable disable
                         object timeslotResult = timeslotCommand.ExecuteScalar();
                         timeslot = timeslotResult.ToString();
                     }

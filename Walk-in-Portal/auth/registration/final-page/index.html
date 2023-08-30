@@ -101,35 +101,39 @@
           <div class="col-12 p-4">
             <div class="content">
               <h6>Aggregate Percentage</h6>
-              <p>65</p>
+              <p id="educationalAggregatePercentage">65</p>
             </div>
             <div class="content">
               <h6>Year of Passing</h6>
-              <p>2020</p>
+              <p id="educationalYearOfPassing">2020</p>
             </div>
             <div class="row">
               <div class="content col-6">
                 <h6>Qualification</h6>
-                <p>Bachelor in Technology (B.Tech)</p>
+                <p id="educationalQualification">
+                  Bachelor in Technology (B.Tech)
+                </p>
               </div>
               <div class="content col-6">
                 <h6>Stream</h6>
-                <p>Information Technology</p>
+                <p id="educationalStream">Information Technology</p>
               </div>
             </div>
             <div class="row">
               <div class="content col-6">
                 <h6>College</h6>
-                <p>Pune Institute of Technology (PIT)</p>
+                <p id="educationalCollege">
+                  Pune Institute of Technology (PIT)
+                </p>
               </div>
               <div class="content col-6">
                 <h6>If others, please enter your college name</h6>
-                <p>-</p>
+                <p id="educationalOtherCollege">-</p>
               </div>
             </div>
             <div class="content">
               <h6>Where is your college located?</h6>
-              <p>Pune</p>
+              <p id="educationalCollegeLocation">Pune</p>
             </div>
           </div>
         </div>
@@ -141,7 +145,7 @@
           <div class="col-12 p-4">
             <div class="content">
               <h6>Applicant Type</h6>
-              <p>Experienced</p>
+              <p id="professionalApplicantType">Experienced</p>
             </div>
           </div>
         </div>
@@ -152,60 +156,60 @@
           <div class="col-12 p-4">
             <div class="content">
               <h6>Years of Experience</h6>
-              <p>5</p>
+              <p id="professionalYearsOfExperience">5</p>
             </div>
             <div class="content">
               <h6>Current CTC (In Rupees)</h6>
-              <p>5,00,000</p>
+              <p id="professionalCurrentCTC">5,00,000</p>
             </div>
             <div class="content">
               <h6>Expected CTC (In Rupees)</h6>
-              <p>6,50,000</p>
+              <p id="professionalExpectedCTC">6,50,000</p>
             </div>
             <div class="content">
               <h6>Select All The Technologies You Expertise In</h6>
-              <p>Javascript</p>
+              <p id="professionalExpertiseTechnologies">Javascript</p>
             </div>
             <div class="content">
               <h6>If others, please mention</h6>
-              <p>-</p>
+              <p id="professionalOtherExpertise">-</p>
             </div>
             <div class="content">
               <h6>Select All The Technologies You are familiar In</h6>
-              <p>Angular JS</p>
-              <p>React</p>
+              <p id="professionalFamiliarTechnologies">Angular JS, React</p>
             </div>
             <div class="content">
               <h6>If others, please mention</h6>
-              <p>-</p>
+              <p id="professionalOtherFamiliar">-</p>
             </div>
             <div class="content">
               <h6>Are you currently on notice period?</h6>
-              <p>Yes</p>
+              <p id="professionalOnNoticePeriod">Yes</p>
             </div>
             <div class="row">
               <div class="content col-6">
                 <h6>If Yes, when will your notice period end?</h6>
-                <p>20-May-2020</p>
+                <p id="professionalNoticePeriodEndDate">20-May-2020</p>
               </div>
               <div class="content col-6">
                 <h6>How long is your notice period? (Mention in months)</h6>
-                <p>2 Months</p>
+                <p id="professionalNoticePeriodLength">2 Months</p>
               </div>
             </div>
             <div class="content">
               <h6>
                 Have You Appeared For Any Test By Zeus in the past 12 months?
               </h6>
-              <p>No</p>
+              <p id="professionalAppearedForZeusTest">No</p>
             </div>
             <div class="content">
               <h6>If Yes, which role did you apply for?</h6>
-              <p>-</p>
+              <p id="professionalAppliedRole">-</p>
             </div>
           </div>
         </div>
       </div>
+
       <center>
         <button class="next" onclick="redirectBackToQualificationPage()">
           PREVIOUS
@@ -224,5 +228,6 @@
           "/Walk-in-Portal/auth/registration/qualification";
       }
     </script>
+    <script src="./index.js"></script>
   </body>
 </html>

@@ -9,7 +9,7 @@ namespace new_b.Model
     {
         public int Id { get; set; }
 
-        public string TimeSlot { get; set; } = "Default Time Slot";
+        public string? TimeSlot { get; set; } = "Default Time Slot";
 
         public bool IsInstructionalDesigner { get; set; } = false;
         public bool IsSoftwareEngineer { get; set; } = false;

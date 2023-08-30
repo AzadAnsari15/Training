@@ -163,7 +163,7 @@ namespace new_b.Controllers
 
         private WalkinlistModel GetWalkinlistDataById(int id)
         {
-            WalkinlistModel walkinlistData = null;
+            WalkinlistModel? walkinlistData = null;
 
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -201,6 +201,7 @@ namespace new_b.Controllers
                     }
                 }
             }
+#nullable disable
 
             return walkinlistData;
         }

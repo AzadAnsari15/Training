@@ -12,6 +12,6 @@ namespace new_b.Models
         public string VenueCity { get; set; } = "";
         public string VenuePostalCode { get; set; } = "";
         public string VenuePhone { get; set; } = "";
-        public List<string> ThingsToRemember { get; set; }
+        public List<string>? ThingsToRemember { get; set; }
     }
 }

@@ -65,7 +65,7 @@ namespace api.Controllers
                     {
                         return NotFound("File not found.");
                     }
-
+#nullable disable
                     return File(file.FileData, file.FileType, file.FileName);
                 }
                 catch (Exception ex)

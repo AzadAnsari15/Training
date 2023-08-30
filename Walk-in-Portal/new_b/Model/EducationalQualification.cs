@@ -10,10 +10,10 @@ namespace new_b.Model
         public int Id { get; set; }
         public decimal AggregatePercentage { get; set; }
         public int YearOfPassing { get; set; }
-        public string Qualification { get; set; }
-        public string Stream { get; set; }
-        public string College { get; set; }
-        public string CollegeLocation { get; set; }
+        public string? Qualification { get; set; }
+        public string? Stream { get; set; }
+        public string? College { get; set; }
+        public string? CollegeLocation { get; set; }
 
     }
 }

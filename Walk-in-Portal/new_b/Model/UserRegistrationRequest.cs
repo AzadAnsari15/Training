@@ -8,8 +8,8 @@ namespace new_b.Model
 
     public class UserRegistrationRequest
     {
-        public EducationalQualification Educational { get; set; }
-        public ProfessionalQualification Professional { get; set; }
+        public EducationalQualification? Educational { get; set; }
+        public ProfessionalQualification? Professional { get; set; }
     }
 
 }
