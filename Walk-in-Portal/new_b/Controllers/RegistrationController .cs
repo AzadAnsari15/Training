@@ -60,23 +60,21 @@ namespace Backend.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetRegistrations()
+        public IActionResult GetRecentRegistration()
         {
             try
             {
-                List<RegistrationModel> registrations = new List<RegistrationModel>();
-
                 using (MySqlConnection connection = new MySqlConnection(_configuration.GetConnectionString("DefaultConnection")))
                 {
                     connection.Open();
 
-                    string query = "SELECT * FROM Registration";
+                    string query = "SELECT * FROM Registration WHERE Id = (SELECT MAX(Id) FROM Registration)";
 
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
-                            while (reader.Read())
+                            if (reader.Read())
                             {
                                 RegistrationModel registration = new RegistrationModel
                                 {
@@ -97,18 +95,21 @@ namespace Backend.Controllers
                                     DateModified = Convert.ToDateTime(reader["DateModified"])
                                 };
 
-                                registrations.Add(registration);
+                                return Ok(registration);
+                            }
+                            else
+                            {
+                                return NotFound(new { message = "No recent registration found." });
                             }
                         }
                     }
                 }
-
-                return Ok(registrations);
             }
             catch (Exception ex)
             {
                 return StatusCode(500, new { error = ex.Message });
             }
         }
+
     }
 }

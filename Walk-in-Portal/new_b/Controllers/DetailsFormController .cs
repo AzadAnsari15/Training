@@ -12,7 +12,7 @@ namespace Backend.Controllers
     {
         private readonly string _connectionString = "Server=localhost;Port=3306;Database=Portal;User Id=root;Password=root";
 
-        private int _nextId = 2; // Initialize with the starting value
+        private int _nextId = 4; // Initialize with the starting value
 
         [HttpPost]
         public IActionResult CreateDetailsForm([FromBody] DetailsModel details)

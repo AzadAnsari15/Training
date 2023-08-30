@@ -187,5 +187,91 @@ namespace Backend.Controllers
             return Ok(users);
         }
 
+        [HttpGet("users/latest")]
+        public IActionResult GetLatestRegisteredUser()
+        {
+            UserRegistrationRequest latestUser = null;
+
+            using (MySqlConnection connection = new MySqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                using (MySqlCommand command = new MySqlCommand(
+                    "SELECT * FROM UserRegistrationRequest ORDER BY Id DESC LIMIT 1;", connection))
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        latestUser = new UserRegistrationRequest();
+
+                        int eduId = reader.GetInt32("EducationalId");
+                        int profId = reader.GetInt32("ProfessionalId");
+
+                        reader.Close(); // Close the current reader before opening a new one
+
+                        // Retrieve educational qualification
+                        using (MySqlCommand eduCommand = new MySqlCommand(
+                            "SELECT * FROM EducationalQualification WHERE Id = @EduId;", connection))
+                        {
+                            eduCommand.Parameters.AddWithValue("@EduId", eduId);
+                            using (MySqlDataReader eduReader = eduCommand.ExecuteReader())
+                            {
+                                if (eduReader.Read())
+                                {
+                                    latestUser.Educational = new EducationalQualification
+                                    {
+                                        Id = eduReader.GetInt32("Id"),
+                                        AggregatePercentage = eduReader.GetDecimal("AggregatePercentage"),
+                                        YearOfPassing = eduReader.GetInt32("YearOfPassing"),
+                                        Qualification = eduReader.GetString("Qualification"),
+                                        Stream = eduReader.GetString("Stream"),
+                                        College = eduReader.GetString("College"),
+                                        CollegeLocation = eduReader.GetString("CollegeLocation")
+                                    };
+                                }
+                                eduReader.Close(); // Close the eduReader after retrieving data
+                            }
+                        }
+
+                        // Retrieve professional qualification
+                        using (MySqlCommand profCommand = new MySqlCommand(
+                            "SELECT * FROM ProfessionalQualification WHERE Id = @ProfId;", connection))
+                        {
+                            profCommand.Parameters.AddWithValue("@ProfId", profId);
+                            using (MySqlDataReader profReader = profCommand.ExecuteReader())
+                            {
+                                if (profReader.Read())
+                                {
+                                    latestUser.Professional = new ProfessionalQualification
+                                    {
+                                        Id = profReader.GetInt32("Id"),
+                                        IsExperienced = profReader.GetBoolean("IsExperienced"),
+                                        YearsOfExperience = profReader.GetInt32("YearsOfExperience"),
+                                        CurrentCTC = profReader.GetDecimal("CurrentCTC"),
+                                        ExpectedCTC = profReader.GetDecimal("ExpectedCTC"),
+                                        IsOnNoticePeriod = profReader.GetBoolean("IsOnNoticePeriod"),
+                                        NoticePeriodEndDate = profReader.GetDateTime("NoticePeriodEndDate"),
+                                        NoticePeriodLengthMonths = profReader.GetInt32("NoticePeriodLengthMonths"),
+                                        AppearedForZeusTest = profReader.GetBoolean("AppearedForZeusTest"),
+                                        AppliedRole = profReader.GetString("AppliedRole"),
+                                        DateCreated = profReader.GetDateTime("DateCreated"),
+                                        DateModified = profReader.GetDateTime("DateModified")
+                                    };
+                                }
+                                profReader.Close(); // Close the profReader after retrieving data
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (latestUser == null)
+            {
+                return NotFound("No registered users found.");
+            }
+
+            return Ok(latestUser);
+        }
+
     }
 }

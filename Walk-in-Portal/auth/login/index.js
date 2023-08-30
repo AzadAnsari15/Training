@@ -6,19 +6,37 @@ document.addEventListener("DOMContentLoaded", function () {
     const password = document.getElementById("password").value;
     // const rememberMe = document.getElementById("rememberMe").checked;
 
+    let currentRegistrationId = 0;
+
+    // Create a function to generate a new registrationId
+    function id() {
+      currentRegistrationId++;
+      return currentRegistrationId;
+    }
+    function generateRegistrationId() {
+      currentRegistrationId++;
+      return currentRegistrationId;
+    }
+
+    // When creating the loginData object
     const loginData = {
+      id: id(),
+
       email: username,
       password: password,
     };
 
     try {
-      const response = await fetch("http://localhost:5199/api/User/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(loginData),
-      });
+      const response = await fetch(
+        "http://localhost:5199/api/User/login-register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(loginData),
+        }
+      );
 
       if (response.ok) {
         const result = await response.json();

@@ -10,13 +10,12 @@ function toggleRadio(label) {
     label.classList.remove("custom-radio:not(.checked)");
   }
 }
-
 document.addEventListener("DOMContentLoaded", function () {
   const registrationForm = document.getElementById("registrationForm");
   const applyButton = document.getElementById("btn-apply");
 
   applyButton.addEventListener("click", async (event) => {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
 
     const formData = {
       timeSlot: "",
@@ -25,24 +24,18 @@ document.addEventListener("DOMContentLoaded", function () {
       isSoftwareQualityEngineer: false,
     };
 
-    // Get the selected radio button's value
     const selectedRadio = registrationForm.querySelector(
-      'input[type="radio"]:checked'
+      'input[name="radioGroup"]:checked'
     );
     if (selectedRadio) {
       formData.timeSlot = selectedRadio.value;
     }
 
-    // Get the selected checkboxes' values
     const instructionalDesignerCheckbox = registrationForm.querySelector(
       'input[value="Instructional Designer"]'
     );
     if (instructionalDesignerCheckbox) {
       formData.isInstructionalDesigner = instructionalDesignerCheckbox.checked;
-      console.log(
-        "Instructional Designer:",
-        instructionalDesignerCheckbox.checked
-      );
     }
 
     const softwareEngineerCheckbox = registrationForm.querySelector(
@@ -50,7 +43,6 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     if (softwareEngineerCheckbox) {
       formData.isSoftwareEngineer = softwareEngineerCheckbox.checked;
-      console.log("Software Engineer:", softwareEngineerCheckbox.checked);
     }
 
     const softwareQualityEngineerCheckbox = registrationForm.querySelector(
@@ -59,12 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (softwareQualityEngineerCheckbox) {
       formData.isSoftwareQualityEngineer =
         softwareQualityEngineerCheckbox.checked;
-      console.log(
-        "Software Quality Engineer:",
-        softwareQualityEngineerCheckbox.checked
-      );
     }
-
+    console.log(formData);
     try {
       const response = await fetch("http://localhost:5199/api/DetailsForm", {
         method: "POST",
@@ -76,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (response.ok) {
         const result = await response.json();
-        console.log(result.message); // Output success message
+        console.log(result.message);
       } else {
         console.error("Error applying:", response.statusText);
       }

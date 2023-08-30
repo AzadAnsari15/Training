@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
 using new_b.Model;
-using System;
-using System.Collections.Generic;
+
+
 
 namespace new_b.Controllers
 {

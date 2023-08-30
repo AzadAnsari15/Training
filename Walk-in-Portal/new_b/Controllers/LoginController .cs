@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
 using new_b.Model;
+using System;
 
 namespace Backend.Controllers
 {
@@ -16,8 +17,8 @@ namespace Backend.Controllers
             _configuration = configuration;
         }
 
-        [HttpPost("login")]
-        public IActionResult Login([FromBody] LoginModel login)
+        [HttpPost("login-register")]
+        public IActionResult LoginRegister([FromBody] LoginModel login)
         {
             try
             {
@@ -25,21 +26,38 @@ namespace Backend.Controllers
                 {
                     connection.Open();
 
-                    string query = "SELECT Id FROM Registration WHERE Email = @Email AND FirstName = @Password";
-
-                    using (MySqlCommand command = new MySqlCommand(query, connection))
+                    // Check if the email and password match in Registration table for login
+                    string selectQuery = "SELECT Id FROM Registration WHERE Email = @Email AND FirstName = @Password";
+                    using (MySqlCommand selectCommand = new MySqlCommand(selectQuery, connection))
                     {
-                        command.Parameters.AddWithValue("@Email", login.Email);
-                        command.Parameters.AddWithValue("@Password", login.Password);
+                        selectCommand.Parameters.AddWithValue("@Email", login.Email);
+                        selectCommand.Parameters.AddWithValue("@Password", login.Password);
 
-                        object result = command.ExecuteScalar();
+                        object result = selectCommand.ExecuteScalar();
 
                         if (result != null)
                         {
-                            return Ok(new { message = "Login successful." });
+                            int registrationId = Convert.ToInt32(result); // Extracted Id from Registration table
+
+                            // Insert new login record into Login table
+                            string insertQuery = "INSERT INTO Login (RegistrationId, Email, Password, DateCreated, DateModified) " +
+                                                 "VALUES (@RegistrationId, @Email, @Password, @DateCreated, @DateModified)";
+                            using (MySqlCommand insertCommand = new MySqlCommand(insertQuery, connection))
+                            {
+                                insertCommand.Parameters.AddWithValue("@RegistrationId", registrationId); // Use extracted Id
+                                insertCommand.Parameters.AddWithValue("@Email", login.Email);
+                                insertCommand.Parameters.AddWithValue("@Password", login.Password);
+                                insertCommand.Parameters.AddWithValue("@DateCreated", DateTime.UtcNow);
+                                insertCommand.Parameters.AddWithValue("@DateModified", DateTime.UtcNow);
+
+                                insertCommand.ExecuteNonQuery();
+
+                                return Ok(new { message = "Login and registration successful." });
+                            }
                         }
                         else
                         {
+                            // Email and password do not match
                             return Unauthorized(new { message = "Invalid credentials." });
                         }
                     }
